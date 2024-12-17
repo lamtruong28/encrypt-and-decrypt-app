@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Encryption & DeCryption App</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Encryption & DeCryption App</h1>
+            <label for="key">Secret Key:</label>
+            <input type="text" id="key" placeholder="Enter secret key" />
+            <label for="data">Input data:</label>
+            <textarea
+                id="data"
+                placeholder="Enter message to encrypt or decrypt"
+                rows="3"
+            ></textarea>
+            <div class="wrap__button">
+                <button onclick="encryptMessage()">Encrypt</button>
+                <button class="decrypt-btn" onclick="decryptMessage()">
+                    Decrypt
+                </button>
+            </div>
+            <p>Processed Information:</p>
+            <textarea id="processedData" readonly rows="5"></textarea>
+            <button id="copy-btn" onclick="copyToClipboard()">Copy</button>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+            integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="script.js"></script>
+    </body>
+</html>
